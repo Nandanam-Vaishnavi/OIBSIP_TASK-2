@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class NumberGuessingGame{
+public class Game{
 public static int pointsInitiator(int n) {
         int points = 0;
             if(n==0)
@@ -24,7 +24,7 @@ public static int pointsInitiator(int n) {
         return points;
     }
 	
-	 public static void Game() {
+	 public static void Games() {
         Scanner sc = new Scanner(System.in);
         int number = 1 + (int) (100 * Math.random());
         int trials = 5;
@@ -37,9 +37,9 @@ public static int pointsInitiator(int n) {
                 " attempt2 : Points 10\n attempt3 : Points 7\n attempt4 : Points 5\n attempt5 : Points 2");
         for (i = 0; i < trials; i++) {
             System.out.println("Guess the number:");
-             
+            // Take input for guessing
             guess = sc.nextInt();
-             
+            // If the number is guessed
             if (number == guess) {
                 System.out.println("Congratulations!Your Points:" + pointsInitiator(i));
 
@@ -59,6 +59,6 @@ public static int pointsInitiator(int n) {
     }
 
     public static void main(String arg[]) {
-        NumberGuessingGame();
+        Games();
     }
 }
